@@ -75,7 +75,7 @@ public class VideoDrawer implements GLSurfaceView.Renderer {
 
         mSlideFilterGroup = new SlideGpuFilterGroup();
         OM = MatrixUtils.getOriginalMatrix();
-        MatrixUtils.flip(OM,false,true);//矩阵上下翻转
+        MatrixUtils.flip(OM,false,false);//矩阵上下翻转
 //        mShow.setMatrix(OM);
 
         WaterMarkFilter waterMarkFilter = new WaterMarkFilter(res);
