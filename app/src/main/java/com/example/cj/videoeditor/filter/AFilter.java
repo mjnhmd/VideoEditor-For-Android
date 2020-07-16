@@ -107,17 +107,17 @@ public abstract class AFilter {
     }
 
     public void draw(){
-        Log.e("videoo", "---卡主了？ 16  "+getClass());
+//        Log.e("videoo", "---卡主了？ 16  "+getClass());
         onClear();
-        Log.e("videoo", "---卡主了？ 17");
+//        Log.e("videoo", "---卡主了？ 17");
         onUseProgram();
-        Log.e("videoo", "---卡主了？ 18");
+//        Log.e("videoo", "---卡主了？ 18");
         onSetExpandData();
-        Log.e("videoo", "---卡主了？ 19");
+//        Log.e("videoo", "---卡主了？ 19");
         onBindTexture();
-        Log.e("videoo", "---卡主了？ 20");
+//        Log.e("videoo", "---卡主了？ 20");
         onDraw();
-        Log.e("videoo", "---卡主了？ 21");
+//        Log.e("videoo", "---卡主了？ 21");
     }
 
     public final void setMatrix(float[] matrix){

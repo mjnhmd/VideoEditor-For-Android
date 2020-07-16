@@ -277,19 +277,19 @@ public class VideoClipper {
                                 encoderInputBuffer.put(stereoBytes);
                                 encoder.queueInputBuffer(encodeInputIndex, 0, stereoBytes.length, info.presentationTimeUs, 0);
                                 encodeinput++;
-                                System.out.println("videoCliper audio encodeInput" + encodeinput + " dataSize" + info.size + " sampeTime" + info.presentationTimeUs);
+//                                System.out.println("videoCliper audio encodeInput" + encodeinput + " dataSize" + info.size + " sampeTime" + info.presentationTimeUs);
                             } else {
                                 encoderInputBuffer.put(decoderOutputBuffer);
                                 encoder.queueInputBuffer(encodeInputIndex, info.offset, info.size, info.presentationTimeUs, 0);
                                 encodeinput++;
-                                System.out.println("videoCliper audio encodeInput" + encodeinput + " dataSize" + info.size + " sampeTime" + info.presentationTimeUs);
+//                                System.out.println("videoCliper audio encodeInput" + encodeinput + " dataSize" + info.size + " sampeTime" + info.presentationTimeUs);
                             }
                         }
                     }
                     if (endOfStream) {
                         int encodeInputIndex = encoder.dequeueInputBuffer(TIMEOUT_USEC);
                         encoder.queueInputBuffer(encodeInputIndex, 0, 0, 0, MediaCodec.BUFFER_FLAG_END_OF_STREAM);
-                        System.out.println("videoCliper audio encodeInput end");
+//                        System.out.println("videoCliper audio encodeInput end");
                         decodeDone = true;
                     }
                     decoder.releaseOutputBuffer(index, false);

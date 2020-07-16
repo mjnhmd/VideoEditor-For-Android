@@ -217,11 +217,11 @@ public class VideoRunnable extends Thread {
                          * 是有效数据 让他写到编码器中
                          * 并且对时间戳 进行重写
                          * */
-                        Log.e("videoo", "---卡主了？ 一  " + decodeOutputInfo.size);
+//                        Log.e("videoo", "---卡主了？ 一  " + decodeOutputInfo.size);
                         outputSurface.awaitNewImage();
-                        Log.e("videoo", "---卡住了  === 二");
+//                        Log.e("videoo", "---卡住了  === 二");
                         outputSurface.drawImage();
-                        Log.e("videoo", "---卡住了  === 三！！！");
+//                        Log.e("videoo", "---卡住了  === 三！！！");
                         if (isFirstDecodeOutputFrame) {
                             /*如果是第一个视频的话，有可能时间戳不是从0 开始的 所以需要初始化*/
                             isFirstDecodeOutputFrame = false;
