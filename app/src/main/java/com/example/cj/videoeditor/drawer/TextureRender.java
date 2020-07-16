@@ -155,11 +155,11 @@ public class TextureRender {
         return mTextureID;
     }
 
-    public void drawFrame(SurfaceTexture st) {
-        zoomDraw(st);
+    public void drawFrame(SurfaceTexture st, boolean mark) {
+        zoomDraw(st, mark);
     }
 
-    public void zoomDraw(SurfaceTexture st){
+    public void zoomDraw(SurfaceTexture st, boolean mark){
         EasyGlUtils.bindFrameTexture(fFrame[0], fTexture[0]);
         GLES20.glViewport(0, 0, viewWidth, viewHeight);
         rotationFilter.draw();
@@ -170,7 +170,7 @@ public class TextureRender {
 
         if (mGpuFilter != null) {
             EasyGlUtils.bindFrameTexture(fFrame[0], fTexture[1]);
-            mGpuFilter.onDrawFrame(mBeFilter.getOutputTexture());
+            mGpuFilter.onDrawFrame(mBeFilter.getOutputTexture(), mark);
             EasyGlUtils.unBindFrameBuffer();
         }
 

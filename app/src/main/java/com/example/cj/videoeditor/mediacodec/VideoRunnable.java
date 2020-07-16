@@ -220,7 +220,7 @@ public class VideoRunnable extends Thread {
 //                        Log.e("videoo", "---卡主了？ 一  " + decodeOutputInfo.size);
                         outputSurface.awaitNewImage();
 //                        Log.e("videoo", "---卡住了  === 二");
-                        outputSurface.drawImage();
+                        outputSurface.drawImage(true);
 //                        Log.e("videoo", "---卡住了  === 三！！！");
                         if (isFirstDecodeOutputFrame) {
                             /*如果是第一个视频的话，有可能时间戳不是从0 开始的 所以需要初始化*/

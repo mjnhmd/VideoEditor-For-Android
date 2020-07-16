@@ -275,8 +275,8 @@ class OutputSurface implements SurfaceTexture.OnFrameAvailableListener {
     /**
      * Draws the data from SurfaceTexture onto the current EGL surface.
      */
-    public void drawImage() {
-        mTextureRender.drawFrame(mSurfaceTexture);
+    public void drawImage(boolean mark) {
+        mTextureRender.drawFrame(mSurfaceTexture, mark);
 //        mDrawer.onDrawFrame(null);
     }
 

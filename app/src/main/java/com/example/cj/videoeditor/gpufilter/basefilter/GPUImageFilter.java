@@ -147,8 +147,12 @@ public class GPUImageFilter {
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
         return OpenGlUtils.ON_DRAWN;
     }
-    
+
     public int onDrawFrame(final int textureId) {
+        return onDrawFrame(textureId, true);
+    }
+    
+    public int onDrawFrame(final int textureId, boolean mark) {
 		GLES20.glUseProgram(mGLProgId);
 		runPendingOnDrawTasks();
 		if (!mIsInitialized) 
@@ -164,7 +168,9 @@ public class GPUImageFilter {
 
 		if (textureId != OpenGlUtils.NO_TEXTURE) {
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-		    GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureId);
+//            if (mark) {
+                GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureId);
+//            }
 		    GLES20.glUniform1i(mGLUniformTexture, 0);
 		}
 		onDrawArraysPre();

@@ -408,8 +408,8 @@ public class VideoClipper {
                     ByteBuffer inputBuffer = decoderInputBuffers[inputIndex];
                     inputBuffer.clear();
                     int readSampleData = extractor.readSampleData(inputBuffer, 0);
-                    long dur = extractor.getSampleTime() - firstSampleTime - startPosition;//当前已经截取的视频长度
-                    if ((dur < duration) && readSampleData > 0) {
+//                    long dur = extractor.getSampleTime() - firstSampleTime - startPosition;//当前已经截取的视频长度
+                    if (readSampleData > 0) {
                         decoder.queueInputBuffer(inputIndex, 0, readSampleData, extractor.getSampleTime(), 0);
                         extractor.advance();
                     } else {
@@ -429,12 +429,13 @@ public class VideoClipper {
                     MediaFormat newFormat = decoder.getOutputFormat();
                 } else if (index < 0) {
                 } else {
-                    boolean doRender = (info.size != 0 && info.presentationTimeUs - firstSampleTime > startPosition);
-                    decoder.releaseOutputBuffer(index, doRender);
+                    boolean doRender = (info.size != 0);
+                    decoder.releaseOutputBuffer(index, true);
                     if (doRender) {
                         // This waits for the image and renders it after it arrives.
                         outputSurface.awaitNewImage();
-                        outputSurface.drawImage();
+                        outputSurface.drawImage(doRender);
+//                    }
                         // Send it to the encoder.
                         inputSurface.setPresentationTime(info.presentationTimeUs * 1000);
                         inputSurface.swapBuffers();
