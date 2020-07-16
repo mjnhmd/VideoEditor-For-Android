@@ -137,12 +137,12 @@ public class TextureRender {
         Matrix.setIdentityM(mSTMatrix, 0);
         Resources resources = MyApplication.getContext().getResources();
         mShow = new NoFilter(resources);
-        mShow.setMatrix(MatrixUtils.flip(MatrixUtils.getOriginalMatrix(), false, true));
+        mShow.setMatrix(MatrixUtils.flip(MatrixUtils.getOriginalMatrix(), false, false));
         rotationFilter = new RotationOESFilter(resources);
         mBeFilter = new GroupFilter(resources);
         //默认加上水印 可以取消掉
         WaterMarkFilter waterMarkFilter = new WaterMarkFilter(resources);
-        waterMarkFilter.setWaterMark(BitmapFactory.decodeResource(resources, R.mipmap.watermark));
+        waterMarkFilter.setWaterMark(BitmapFactory.decodeResource(resources, R.mipmap.img_aac));//这里是真正的水印
 
         waterMarkFilter.setPosition(0, 70, 0, 0);
         mBeFilter.addFilter(waterMarkFilter);

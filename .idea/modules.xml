@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Code-VideoEditor-For-Android.iml" filepath="$PROJECT_DIR$/.idea/modules/Code-VideoEditor-For-Android.iml" group="VideoEditor-For-Android" />
       <module fileurl="file://$PROJECT_DIR$/VideoEditor.iml" filepath="$PROJECT_DIR$/VideoEditor.iml" />
-      <module fileurl="file://D:/VideoEditor-For-Android/VideoEditor.iml" filepath="D:/VideoEditor-For-Android/VideoEditor.iml" />
       <module fileurl="file://$PROJECT_DIR$/VideoEditor-For-Android.iml" filepath="$PROJECT_DIR$/VideoEditor-For-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VideoEditor-For-Android-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VideoEditor-For-Android-app.iml" group="VideoEditor-For-Android/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

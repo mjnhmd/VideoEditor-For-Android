@@ -92,7 +92,6 @@ public class VideoAdapter extends CursorAdapter {
                 .load(uri)
                 .placeholder(R.mipmap.editor_img_def_video)
                 .error(R.mipmap.editor_img_def_video)
-                .crossFade()
                 .into(holder.pic);
     }
 

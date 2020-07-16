@@ -79,7 +79,7 @@ public class VideoDrawer implements GLSurfaceView.Renderer {
 //        mShow.setMatrix(OM);
 
         WaterMarkFilter waterMarkFilter = new WaterMarkFilter(res);
-        waterMarkFilter.setWaterMark(BitmapFactory.decodeResource(res, R.mipmap.watermark));
+        waterMarkFilter.setWaterMark(BitmapFactory.decodeResource(res, R.mipmap.img_mp3));//这里是展示视频预览的
 
         waterMarkFilter.setPosition(0,70,0,0);
         mBeFilter.addFilter(waterMarkFilter);

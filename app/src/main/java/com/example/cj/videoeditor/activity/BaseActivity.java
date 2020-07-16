@@ -3,7 +3,8 @@ package com.example.cj.videoeditor.activity;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Looper;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cj.videoeditor.widget.LoadingDialog;
 
@@ -12,7 +13,7 @@ import com.example.cj.videoeditor.widget.LoadingDialog;
  * desc
  */
 
-public class BaseActivity extends AppCompatActivity{
+public class BaseActivity extends AppCompatActivity {
     public LoadingDialog loading;
 
     @Override

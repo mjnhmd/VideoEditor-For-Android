@@ -3,8 +3,6 @@ package com.example.cj.videoeditor.activity;
 import android.content.Intent;
 import android.media.MediaMetadataRetriever;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
@@ -14,6 +12,7 @@ import com.example.cj.videoeditor.Constants;
 import com.example.cj.videoeditor.R;
 import com.example.cj.videoeditor.media.VideoInfo;
 import com.example.cj.videoeditor.mediacodec.MediaMuxerRunnable;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,7 @@ public class VideoConnectActivity extends BaseActivity implements View.OnClickLi
     private ArrayList<VideoInfo> mInfoList = new ArrayList<>();
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_connect);
         findViewById(R.id.select_one).setOnClickListener(this);

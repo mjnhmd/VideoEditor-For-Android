@@ -3,7 +3,6 @@ package com.example.cj.videoeditor.activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -34,7 +33,7 @@ public class AudioPreviewActivity extends BaseActivity implements View.OnClickLi
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_audio_preview);
         previewView = (VideoPreviewView) findViewById(R.id.videoView);
