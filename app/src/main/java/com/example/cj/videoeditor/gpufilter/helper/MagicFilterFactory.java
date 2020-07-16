@@ -11,6 +11,7 @@ import com.example.cj.videoeditor.gpufilter.filter.MagicHudsonFilter;
 import com.example.cj.videoeditor.gpufilter.filter.MagicInkwellFilter;
 import com.example.cj.videoeditor.gpufilter.filter.MagicN1977Filter;
 import com.example.cj.videoeditor.gpufilter.filter.MagicNashvilleFilter;
+import com.example.cj.videoeditor.gpufilter.filter.MagicNoneFilter;
 
 public class MagicFilterFactory {
 
@@ -43,7 +44,7 @@ public class MagicFilterFactory {
             case WARM:
                 return new MagicWarmFilter();
             default:
-                return null;
+                return new MagicNoneFilter();
         }
     }
 

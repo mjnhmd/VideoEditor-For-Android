@@ -104,10 +104,6 @@ public class VideoClipper {
     }
 
     public void setFilterType(MagicFilterType type) {
-        if (type == null || type == MagicFilterType.NONE) {
-            mFilter = null;
-            return;
-        }
         mFilter = MagicFilterFactory.initFilters(type);
     }
 
