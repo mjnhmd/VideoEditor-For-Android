@@ -158,7 +158,6 @@ public class TextureRender {
     public void drawFrame(SurfaceTexture st, boolean mark) {
         zoomDraw(st, mark);
     }
-    int lastMark = 1;
     public void zoomDraw(SurfaceTexture st, boolean mark){
         EasyGlUtils.bindFrameTexture(fFrame[0], fTexture[0]);
         GLES20.glViewport(0, 0, viewWidth, viewHeight);
@@ -177,15 +176,14 @@ public class TextureRender {
         if (videoChanged) {
             GLES20.glViewport(x, y, width, height);
         }
-        if (lastMark > 10) {
-            if (lastMark > 20){
-                lastMark = 0;
-            }
+        Log.e("MJNMJNMJN", "mark = " + mark);
+        if (mark) {
+            mShow.setMatrix(MatrixUtils.flip(MatrixUtils.getOriginalMatrix(), false, false));
             mShow.setTextureId(fTexture[mGpuFilter == null ? 0 : 1]);
         } else {
+            mShow.setMatrix(MatrixUtils.flip(MatrixUtils.getOriginalMatrix(), false, true));
             mShow.setTextureId(fTexture[0]);
         }
-        lastMark++;
         mShow.draw();
         GLES20.glFinish();
     }

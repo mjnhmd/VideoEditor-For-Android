@@ -178,7 +178,7 @@ public class PreviewActivity extends BaseActivity implements View.OnClickListene
                     clipper.showBeauty();
                 }
                 clipper.setInputVideoPath(mPath);
-                outputPath = Constants.getPath("video/clip/", System.currentTimeMillis() + "");
+                outputPath = Constants.getPath("video/", System.currentTimeMillis() + "");
                 clipper.setFilterType(filterType);
                 clipper.setOutputVideoPath(outputPath);
                 clipper.setOnVideoCutFinishListener(new VideoClipper.OnVideoCutFinishListener() {

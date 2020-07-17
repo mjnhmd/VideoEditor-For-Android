@@ -59,7 +59,7 @@ public class Constants {
     }
 
     public static String getBaseFolder() {
-        String baseFolder = Environment.getExternalStorageDirectory() + "/Codec/";
+        String baseFolder = Environment.getExternalStorageDirectory() + "/001/";
         File f = new File(baseFolder);
         if (!f.exists()) {
             boolean b = f.mkdirs();
