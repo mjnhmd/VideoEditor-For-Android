@@ -176,7 +176,6 @@ public class TextureRender {
         if (videoChanged) {
             GLES20.glViewport(x, y, width, height);
         }
-        Log.e("MJNMJNMJN", "mark = " + mark);
         if (mark) {
             mShow.setMatrix(MatrixUtils.flip(MatrixUtils.getOriginalMatrix(), false, false));
             mShow.setTextureId(fTexture[mGpuFilter == null ? 0 : 1]);

@@ -430,7 +430,6 @@ public class VideoClipper {
                 } else if (index < 0) {
                 } else {
                     boolean doRender = (info.presentationTimeUs > 4000000 );
-                    Log.e("MJNMJNMJN", "time = " + info.presentationTimeUs);
                     decoder.releaseOutputBuffer(index, true);
                     if (info.size != 0) {
                         // This waits for the image and renders it after it arrives.
